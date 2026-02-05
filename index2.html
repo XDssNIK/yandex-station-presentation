@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Кнопка возврата на главную -->
+    <a href="index.html" class="back-button">← На главную</a>
+    
     <div class="survey-container">
         <div class="survey-header">
             <div class="logo">Яндекс</div>
@@ -161,13 +164,11 @@
 
             <div class="form-buttons">
                 <button type="submit" class="submit-button">Отправить отзыв</button>
-                <button type="reset" class="reset-button">Очистить форму</button>
             </div>
         </form>
 
         <div class="survey-footer">
             <p>Спасибо за ваше время! Ваши ответы помогут нам стать лучше.</p>
-            <a href="index.html" class="back-link">← Вернуться на главную</a>
         </div>
     </div>
 
@@ -175,12 +176,8 @@
         document.getElementById('feedbackForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // В реальном приложении здесь была бы отправка данных на сервер
             alert('Спасибо за ваш отзыв! Ваши ответы сохранены анонимно.');
-            
-            // Очистка формы после отправки
-            this.reset();
-            
+               
             // Перенаправление обратно на главную
             setTimeout(() => {
                 window.location.href = 'index.html';
