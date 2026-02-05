@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос после презентации Яндекс Станция Мини</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="survey-container">
+        <div class="survey-header">
+            <div class="logo">Яндекс</div>
+            <h1>Обратная связь</h1>
+            <p class="subtitle">Анонимный опрос о презентации Яндекс Станция Мини</p>
+            <p class="note">Все поля опроса являются анонимными и необязательными</p>
+        </div>
+
+        <form id="feedbackForm" class="survey-form">
+            <!-- Вопрос 1: Оценка презентации -->
+            <div class="question">
+                <label class="question-text">1. Как вы оцениваете презентацию в целом?</label>
+                <div class="rating-scale">
+                    <div class="rating-option">
+                        <input type="radio" id="rating1" name="presentation_rating" value="1">
+                        <label for="rating1">1 (Плохо)</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating2" name="presentation_rating" value="2">
+                        <label for="rating2">2</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating3" name="presentation_rating" value="3">
+                        <label for="rating3">3</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating4" name="presentation_rating" value="4">
+                        <label for="rating4">4</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating5" name="presentation_rating" value="5">
+                        <label for="rating5">5 (Отлично)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 2: Выбор из списка -->
+            <div class="question">
+                <label class="question-text">2. Что было наиболее полезным на презентации?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature1" name="useful_parts" value="demo">
+                        <label for="feature1">Живая демонстрация работы</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature2" name="useful_parts" value="tech">
+                        <label for="feature2">Технические характеристики</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature3" name="useful_parts" value="integration">
+                        <label for="feature3">Интеграция с умным домом</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature4" name="useful_parts" value="comparison">
+                        <label for="feature4">Сравнение с конкурентами</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feature5" name="useful_parts" value="qa">
+                        <label for="feature5">Сессия вопросов и ответов</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 3: Открытый вопрос -->
+            <div class="question">
+                <label class="question-text">3. Что можно улучшить в следующих презентациях?</label>
+                <textarea name="improvements" rows="3" placeholder="Ваши предложения..."></textarea>
+            </div>
+
+            <!-- Вопрос 4: Шкала -->
+            <div class="question">
+                <label class="question-text">4. Насколько вас заинтересовал продукт после презентации?</label>
+                <div class="scale-labels">
+                    <span>Не заинтересован</span>
+                    <span>Очень заинтересован</span>
+                </div>
+                <input type="range" name="interest_level" min="1" max="10" value="5" class="slider">
+                <div class="scale-numbers">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                    <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                </div>
+            </div>
+
+            <!-- Вопрос 5: Выбор одного варианта -->
+            <div class="question">
+                <label class="question-text">5. Рассматриваете ли покупку Яндекс Станции Мини?</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="purchase1" name="purchase_consideration" value="yes">
+                        <label for="purchase1">Да, планирую купить</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purchase2" name="purchase_consideration" value="maybe">
+                        <label for="purchase2">Возможно, нужно подумать</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purchase3" name="purchase_consideration" value="no">
+                        <label for="purchase3">Нет, не планирую</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="purchase4" name="purchase_consideration" value="already">
+                        <label for="purchase4">Уже купил(а)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 6: Рейтинг отдельных аспектов -->
+            <div class="question">
+                <label class="question-text">6. Оцените по шкале от 1 до 5:</label>
+                <div class="aspects-grid">
+                    <div class="aspect">
+                        <label>Качество звука</label>
+                        <select name="sound_quality">
+                            <option value="">Выберите оценку</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="aspect">
+                        <label>Дизайн устройства</label>
+                        <select name="design">
+                            <option value="">Выберите оценку</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="aspect">
+                        <label>Функциональность</label>
+                        <select name="functionality">
+                            <option value="">Выберите оценку</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 7: Дополнительные комментарии -->
+            <div class="question">
+                <label class="question-text">7. Другие комментарии или предложения</label>
+                <textarea name="comments" rows="4" placeholder="Любые другие мысли о продукте или презентации..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="submit-button">Отправить отзыв</button>
+                <button type="reset" class="reset-button">Очистить форму</button>
+            </div>
+        </form>
+
+        <div class="survey-footer">
+            <p>Спасибо за ваше время! Ваши ответы помогут нам стать лучше.</p>
+            <a href="index.html" class="back-link">← Вернуться на главную</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // В реальном приложении здесь была бы отправка данных на сервер
+            alert('Спасибо за ваш отзыв! Ваши ответы сохранены анонимно.');
+            
+            // Очистка формы после отправки
+            this.reset();
+            
+            // Перенаправление обратно на главную
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
